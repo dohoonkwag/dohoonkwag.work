@@ -1,0 +1,23 @@
+body {
+    max-width: 700px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.nav-button {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+}
+
+.hi {
+    margin-top: 40px;
+}
