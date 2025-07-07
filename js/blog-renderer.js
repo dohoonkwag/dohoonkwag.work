@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 3. Construct the path to the Markdown file
-    const markdownFilePath = `../posts/${postFileName}.md`;
+    const markdownFilePath = `./posts/${postFileName}.md`;
 
     // 4. Fetch the Markdown content
     fetch(markdownFilePath)
