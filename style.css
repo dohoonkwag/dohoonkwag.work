@@ -21,6 +21,10 @@ nav {
     cursor: pointer;
 }
 
+footer {
+  margin-top: 4rem;
+}
+
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
