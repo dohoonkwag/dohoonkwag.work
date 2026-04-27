@@ -1,58 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work — Dohoon Kwag</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS2E5YSQR8"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-FS2E5YSQR8');
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>work!</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
-        <a href ="./index.html" class="nav-button ">home</a>
-        <a href="./work.html" class="nav-button">work</a>
-        <a href="./projects.html" class="nav-button">projects</a>
-        <a href="./blog.html" class="nav-button">blog</a>
-    </nav>
-    <h1 class="hi">Work</h1>
-    <hr class="section-line">
+    <div class="container">
+        <nav class="navigation">
+            <a href="./index.html" class="nav-logo">DK</a>
+            <ul class="nav-links">
+                <li><a href="./index.html"    class="nav-button">Home</a></li>
+                <li><a href="./work.html"     class="nav-button">Work</a></li>
+                <li><a href="./feed.html"     class="nav-button">Writing</a></li>
+            </ul>
+        </nav>
 
-    <section class="experience-item">
-        <div class="experience-header">
-            <div class="experience-info">
-                <h3>Engineering Design Intern</h3>
-                <p class="experience-title">Oshman Engineering Design Kitchen</p>
+        <header class="page-header">
+            <p class="page-subtitle">// experience</p>
+            <h1 class="page-title">Work</h1>
+            <hr class="section-rule">
+        </header>
+
+        <section class="experience-item">
+            <div class="experience-header">
+                <div class="experience-info">
+                    <h3>Engineering Design Intern</h3>
+                    <p class="experience-title">Oshman Engineering Design Kitchen</p>
+                </div>
+                <div class="date-range">Summer 2025</div>
             </div>
-            <div class="date-range">Summer 2025</div>
-        </div>
 
-        <ul class="experience-list">
-            <li>
-            Worked on two projects: <strong>EARTI</strong> and <strong>Attwater Prairie Chicken Egg</strong> for Big S and the Houston Zoo
-            </li>
-            <li>
-            <strong>EARTI: </strong>Designed and built a compact, mobile inspection camera system for Big S’s automated hydroponic farming system, EARTI.
-            </li>
-            <li>
-            <strong>Attwater Prairie Chicken Egg: </strong> Developed a “tech egg” to support conservation of the endangered Attwater Prairie Chicken. It collects real-time data to better understand incubation patterns and improve egg viability.
-            </li>
-            <li>
-            Gained hands-on experience with <strong>Raspberry Pi, Arduino, ESP32</strong> and microcontrollers in general.
-            </li>
-            <li>
-            Gained valuable experience with <strong>laser cutting</strong>, <strong>CAD modeling</strong>, <strong>CNC machining</strong>, <strong>welding</strong>, <strong>PCB design</strong>, and <strong>SLA 3D printing</strong>.
-            </li>
-        </ul>
-    </section>
+            <ul class="experience-list">
+                <li>
+                    Worked on two projects: <strong>EARTI</strong> and the <strong>Attwater Prairie Chicken Egg</strong> for Big S and the Houston Zoo.
+                </li>
+                <li>
+                    <strong>EARTI:</strong> Designed and built a compact, mobile inspection camera system for Big S's automated hydroponic farming system, EARTI.
+                </li>
+                <li>
+                    <strong>Attwater Prairie Chicken Egg:</strong> Developed a "tech egg" to support conservation of the endangered Attwater Prairie Chicken — collecting real-time data to better understand incubation patterns and improve egg viability.
+                </li>
+                <li>
+                    Gained hands-on experience with <strong>Raspberry Pi, Arduino, ESP32</strong> and microcontrollers in general.
+                </li>
+                <li>
+                    Gained experience with <strong>laser cutting</strong>, <strong>CAD modeling</strong>, <strong>CNC machining</strong>, <strong>welding</strong>, <strong>PCB design</strong>, and <strong>SLA 3D printing</strong>.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Add future experience items here using the same structure -->
+
+        <footer>
+            <p>&copy; 2025 Dohoon Kwag</p>
+            <div class="footer-links">
+                <a href="mailto:dk@rice.edu">Email</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

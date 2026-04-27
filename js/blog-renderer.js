@@ -1,40 +1,47 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // 1. Get the container where the post will be displayed
+document.addEventListener('DOMContentLoaded', function () {
     const postContainer = document.getElementById('post-container');
 
-    // 2. Determine which Markdown file to load
-    //    We'll use URL parameters to specify the post.
-    //    Example URL: post.html?post=my-first-post
-    const urlParams = new URLSearchParams(window.location.search);
-    const postFileName = urlParams.get('post'); // Gets 'my-first-post'
+    const urlParams    = new URLSearchParams(window.location.search);
+    const postFileName = urlParams.get('post');
 
     if (!postFileName) {
-        postContainer.innerHTML = '<h2>Error: No post specified.</h2><p>Please use a URL like `post.html?post=my-first-post`</p>';
-        return; // Stop execution if no post name is provided
+        postContainer.innerHTML = `
+            <h2 style="font-family: var(--serif); color: var(--ink);">No post specified.</h2>
+            <p style="color: var(--ink-muted);">Use a URL like <code>post.html?post=my-post-filename</code></p>
+        `;
+        return;
     }
 
-    // 3. Construct the path to the Markdown file
     const markdownFilePath = `./posts/${postFileName}.md`;
 
-    // 4. Fetch the Markdown content
     fetch(markdownFilePath)
         .then(response => {
             if (!response.ok) {
-                // If the file isn't found (e.g., 404 error)
-                throw new Error(`HTTP error! status: ${response.status} - Could not find post: ${markdownFilePath}`);
+                throw new Error(`Post not found: ${markdownFilePath} (${response.status})`);
             }
-            return response.text(); // Get the response body as plain text
+            return response.text();
         })
         .then(markdownText => {
-            // 5. Convert Markdown to HTML using marked.js
+            // Parse the markdown
             const htmlContent = marked.parse(markdownText);
 
-            // 6. Inject the HTML into the container
+            // Inject into container
             postContainer.innerHTML = htmlContent;
+
+            // Update page title if an H1 exists
+            const h1 = postContainer.querySelector('h1');
+            if (h1) {
+                document.title = `${h1.textContent} — Dohoon Kwag`;
+            }
         })
         .catch(error => {
-            // 7. Handle any errors during fetching or parsing
-            console.error('Error loading or parsing Markdown:', error);
-            postContainer.innerHTML = `<h2>Error Loading Post</h2><p>${error.message}</p><p>Please check the file name and path.</p>`;
+            console.error('Error loading post:', error);
+            postContainer.innerHTML = `
+                <h2 style="font-family: var(--serif); color: var(--ink);">Couldn't load this post.</h2>
+                <p style="color: var(--ink-muted);">${error.message}</p>
+                <p style="color: var(--ink-muted); margin-top: 1rem;">
+                    <a href="./feed.html" style="color: var(--amber);">← Back to Writing</a>
+                </p>
+            `;
         });
 });

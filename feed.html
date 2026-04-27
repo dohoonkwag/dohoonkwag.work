@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing — Dohoon Kwag</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS2E5YSQR8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FS2E5YSQR8');
+    </script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="./index.html" class="nav-logo">DK</a>
+            <ul class="nav-links">
+                <li><a href="./index.html"    class="nav-button">Home</a></li>
+                <li><a href="./work.html"     class="nav-button">Work</a></li>
+                <li><a href="./feed.html"     class="nav-button">Writing</a></li>
+            </ul>
+        </nav>
+
+        <header class="page-header">
+            <p class="page-subtitle">// field notes</p>
+            <h1 class="page-title">Writing</h1>
+            <hr class="section-rule">
+            <p style="color: var(--ink-muted); font-size: 0.95rem; margin-bottom: 1.75rem; max-width: 480px;">
+                Projects, research rabbit holes, event recaps, and occasional thoughts. 
+                Filter by tag below.
+            </p>
+
+            <!-- Tag filter -->
+            <div class="tag-filter" id="tagFilter">
+                <button class="tag-btn active" data-tag="all">All</button>
+                <button class="tag-btn" data-tag="project">Project</button>
+                <button class="tag-btn" data-tag="neuro">Neuroengineering</button>
+                <button class="tag-btn" data-tag="research">Research</button>
+                <button class="tag-btn" data-tag="personal">Personal</button>
+                <button class="tag-btn" data-tag="reflection">Reflection</button>
+            </div>
+        </header>
+
+        <!-- ══════════════════════════════════════════
+             FEED — add new posts here, newest first.
+             data-tags: space-separated list of tags
+             (project | neuro | research | personal | reflection)
+        ═══════════════════════════════════════════ -->
+        <div class="feed" id="feed">
+
+            <a href="post.html?post=firstpost"
+               class="post-card"
+               data-tags="personal reflection">
+                <div class="post-card-meta">
+                    <span class="post-date">July 6, 2025</span>
+                    <div class="post-tags">
+                        <span class="tag-pill tag-personal">Personal</span>
+                        <span class="tag-pill tag-reflection">Reflection</span>
+                    </div>
+                </div>
+                <h2 class="post-title">Why I Built This</h2>
+                <p class="post-excerpt">
+                    On building a public notebook, the anxiety of starting, and why I think writing in the open makes you smarter.
+                </p>
+            </a>
+
+            <!--
+                TEMPLATE — copy and paste a new card above to add a post:
+
+            <a href="post.html?post=FILENAME"
+               class="post-card"
+               data-tags="TAG1 TAG2">
+                <div class="post-card-meta">
+                    <span class="post-date">Month DD, YYYY</span>
+                    <div class="post-tags">
+                        <span class="tag-pill tag-TAG1">TAG1</span>
+                    </div>
+                </div>
+                <h2 class="post-title">Post Title</h2>
+                <p class="post-excerpt">A one or two sentence teaser.</p>
+            </a>
+
+            -->
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Dohoon Kwag</p>
+            <div class="footer-links">
+                <a href="mailto:dk@rice.edu">Email</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Tag filtering
+        const filterBtns = document.querySelectorAll('.tag-btn');
+        const cards      = document.querySelectorAll('.post-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const tag = btn.dataset.tag;
+
+                cards.forEach(card => {
+                    if (tag === 'all') {
+                        card.classList.remove('hidden');
+                    } else {
+                        const cardTags = card.dataset.tags || '';
+                        card.classList.toggle('hidden', !cardTags.split(' ').includes(tag));
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
