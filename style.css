@@ -1,6 +1,6 @@
 /* ============================================================
    DOHOON KWAG — NEUROENGINEERING PORTFOLIO
-   Dark Academia × Neuroscience Lab Notebook
+   Dark Academia × Lab Notebook — Warm, Elegant, Wide
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
@@ -18,16 +18,14 @@
 
   --amber:       #c8903a;
   --amber-soft:  #d4a855;
-  --signal:      #4fc3c8;   /* neuron signal blue */
-  --signal-dim:  #2a6f73;
-  --rose:        #b85c5c;
+  --gold-dim:    #7a5c28;
 
   --serif:       'Cormorant Garamond', Georgia, serif;
   --body:        'EB Garamond', Georgia, serif;
   --mono:        'DM Mono', 'Courier New', monospace;
 
   --radius:      4px;
-  --max-w:       680px;
+  --max-w:       860px;
   --line:        1px solid #2e2820;
 }
 
@@ -60,7 +58,7 @@ body::before {
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2.5rem;
 }
 
 /* ── NAVIGATION ── */
@@ -138,7 +136,8 @@ body::before {
 .page-subtitle {
   font-family: var(--mono);
   font-size: 0.72rem;
-  color: var(--signal);
+  color: var(--amber);
+  opacity: 0.6;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   margin-top: 0.5rem;
@@ -152,36 +151,17 @@ body::before {
 
 /* ── HOME PAGE ── */
 .home-intro {
-  padding: 3rem 0 2rem;
-}
-
-.home-intro .eyebrow {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--signal);
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.home-intro .eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--signal);
+  padding: 4rem 0 3rem;
+  max-width: 640px;
 }
 
 .home-name {
   font-family: var(--serif);
-  font-size: clamp(3rem, 8vw, 5rem);
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 300;
   line-height: 1.0;
   color: var(--ink);
-  margin-bottom: 0.2em;
+  margin-bottom: 2rem;
 }
 
 .home-name em {
@@ -189,18 +169,8 @@ body::before {
   color: var(--amber-soft);
 }
 
-.home-tagline {
-  font-family: var(--serif);
-  font-size: 1.25rem;
-  font-style: italic;
-  color: var(--ink-muted);
-  margin-bottom: 2rem;
-  font-weight: 300;
-}
-
 .home-bio {
   color: var(--ink-muted);
-  max-width: 520px;
   line-height: 1.85;
 }
 
@@ -211,78 +181,6 @@ body::before {
 .home-bio strong {
   color: var(--ink);
   font-weight: 500;
-}
-
-/* neuron decoration */
-.neuron-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 2.5rem 0;
-}
-
-.neuron-bar span {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  color: var(--ink-faint);
-  letter-spacing: 0.1em;
-}
-
-.neuron-line {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, var(--signal-dim), transparent);
-}
-
-.neuron-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--signal);
-  box-shadow: 0 0 8px var(--signal);
-  animation: pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--signal); }
-  50%       { opacity: 0.5; box-shadow: 0 0 2px var(--signal); }
-}
-
-/* ── PROFILE IMAGE ── */
-.home-image-wrap {
-  margin: 2.5rem 0;
-  position: relative;
-  display: inline-block;
-}
-
-.home-image-wrap img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: var(--radius);
-  filter: sepia(0.25) contrast(1.05);
-  display: block;
-}
-
-.home-image-wrap::before {
-  content: '';
-  position: absolute;
-  inset: -6px;
-  border: 1px solid var(--ink-faint);
-  border-radius: calc(var(--radius) + 2px);
-  pointer-events: none;
-}
-
-.home-image-wrap::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  right: -12px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--amber);
-  border-radius: var(--radius);
-  opacity: 0.35;
-  z-index: -1;
 }
 
 /* ── WORK PAGE ── */
@@ -355,8 +253,7 @@ body::before {
   font-weight: 500;
 }
 
-/* ── FEED (BLOG + PROJECTS UNIFIED) ── */
-/* Tag filter bar */
+/* ── FEED ── */
 .tag-filter {
   display: flex;
   flex-wrap: wrap;
@@ -389,10 +286,10 @@ body::before {
   color: var(--bg);
 }
 
-.tag-btn[data-tag="project"].active    { background: var(--signal);    border-color: var(--signal);    color: var(--bg); }
-.tag-btn[data-tag="neuro"].active      { background: #8b65c7;           border-color: #8b65c7;          color: #fff; }
-.tag-btn[data-tag="personal"].active   { background: var(--rose);       border-color: var(--rose);      color: #fff; }
-.tag-btn[data-tag="research"].active   { background: #5a8a5a;           border-color: #5a8a5a;          color: #fff; }
+.tag-btn[data-tag="project"].active    { background: #7a9e7e;  border-color: #7a9e7e;  color: var(--bg); }
+.tag-btn[data-tag="neuro"].active      { background: #8b7fc7;  border-color: #8b7fc7;  color: #fff; }
+.tag-btn[data-tag="personal"].active   { background: #b06060;  border-color: #b06060;  color: #fff; }
+.tag-btn[data-tag="research"].active   { background: #5a8a5a;  border-color: #5a8a5a;  color: #fff; }
 
 /* Post cards */
 .feed {
@@ -433,10 +330,10 @@ body::before {
 
 .post-card:hover::before { background: var(--amber); }
 
-.post-card[data-tags*="project"]:hover::before { background: var(--signal); }
-.post-card[data-tags*="neuro"]:hover::before   { background: #8b65c7; }
-.post-card[data-tags*="personal"]:hover::before{ background: var(--rose); }
-.post-card[data-tags*="research"]:hover::before{ background: #5a8a5a; }
+.post-card[data-tags*="project"]:hover::before  { background: #7a9e7e; }
+.post-card[data-tags*="neuro"]:hover::before    { background: #8b7fc7; }
+.post-card[data-tags*="personal"]:hover::before { background: #b06060; }
+.post-card[data-tags*="research"]:hover::before { background: #5a8a5a; }
 
 .post-card-meta {
   display: flex;
@@ -469,11 +366,10 @@ body::before {
   border: 1px solid currentColor;
 }
 
-.tag-pill.tag-project    { color: var(--signal); }
-.tag-pill.tag-neuro      { color: #8b65c7; }
-.tag-pill.tag-personal   { color: var(--rose); }
+.tag-pill.tag-project    { color: #7a9e7e; }
+.tag-pill.tag-neuro      { color: #8b7fc7; }
+.tag-pill.tag-personal   { color: #b06060; }
 .tag-pill.tag-research   { color: #5a8a5a; }
-.tag-pill.tag-reflection { color: var(--amber); }
 
 .post-title {
   font-family: var(--serif);
@@ -494,7 +390,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Hidden posts */
 .post-card.hidden {
   display: none;
 }
@@ -568,7 +463,7 @@ body::before {
   background: var(--bg-card);
   padding: 0.15em 0.4em;
   border-radius: var(--radius);
-  color: var(--signal);
+  color: var(--amber-soft);
 }
 
 #post-container pre {
@@ -597,7 +492,6 @@ body::before {
   line-height: 1.75;
 }
 
-/* Post meta header */
 .post-meta-header {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
@@ -612,6 +506,22 @@ body::before {
   font-size: 0.75rem;
   color: var(--ink-faint);
 }
+
+/* ── BACK LINK (post.html) ── */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s;
+}
+.back-link:hover { color: var(--amber); }
 
 /* ── FOOTER ── */
 footer {
@@ -674,8 +584,10 @@ img {
 .container > *:nth-child(5) { animation-delay: 0.33s; }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   :root { --max-w: 100%; }
+
+  .container { padding: 0 1.25rem; }
 
   .navigation {
     flex-direction: column;

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing — Dohoon Kwag</title>
+    <title>Writing</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS2E5YSQR8"></script>
     <script>
@@ -41,30 +41,28 @@
                 <button class="tag-btn" data-tag="neuro">Neuroengineering</button>
                 <button class="tag-btn" data-tag="research">Research</button>
                 <button class="tag-btn" data-tag="personal">Personal</button>
-                <button class="tag-btn" data-tag="reflection">Reflection</button>
             </div>
         </header>
 
         <!-- ══════════════════════════════════════════
              FEED — add new posts here, newest first.
              data-tags: space-separated list of tags
-             (project | neuro | research | personal | reflection)
+             (project | neuro | research | personal)
         ═══════════════════════════════════════════ -->
         <div class="feed" id="feed">
 
-            <a href="post.html?post=firstpost"
+            <a href="post.html?post=/posts/firstpost.md"
                class="post-card"
-               data-tags="personal reflection">
+               data-tags="personal">
                 <div class="post-card-meta">
                     <span class="post-date">July 6, 2025</span>
                     <div class="post-tags">
                         <span class="tag-pill tag-personal">Personal</span>
-                        <span class="tag-pill tag-reflection">Reflection</span>
                     </div>
                 </div>
                 <h2 class="post-title">Why I Built This</h2>
                 <p class="post-excerpt">
-                    On building a public notebook, the anxiety of starting, and why I think writing in the open makes you smarter.
+                    On why I made a personal website!
                 </p>
             </a>
 
@@ -104,7 +102,6 @@
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                // Update active button
                 filterBtns.forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
 
