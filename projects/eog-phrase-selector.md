@@ -18,8 +18,8 @@ Communicating using only eye blinks! The EOG Phrase Selector picks up electroocu
 ═══════════════════════════════════════════ -->
 <div class="video-embed">
     <iframe
-        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-        title="EOG Phrase Selector demo"
+        src="https://www.youtube.com/embed/VXdcWqiZcaQ"
+        title="EOG Phrase Selector Demo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
