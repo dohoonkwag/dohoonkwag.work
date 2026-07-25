@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!postFileName) {
         postContainer.innerHTML = `
             <h2 style="font-family: var(--serif); color: var(--ink);">No post specified.</h2>
-            <p style="color: var(--ink-muted);">Use a URL like <code>post.html?post=my-post-filename</code></p>
+            <p style="color: var(--ink);">Use a URL like <code>post.html?post=my-post-filename</code></p>
         `;
         return;
     }
@@ -38,9 +38,9 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error loading post:', error);
             postContainer.innerHTML = `
                 <h2 style="font-family: var(--serif); color: var(--ink);">Couldn't load this post.</h2>
-                <p style="color: var(--ink-muted);">${error.message}</p>
-                <p style="color: var(--ink-muted); margin-top: 1rem;">
-                    <a href="./feed.html" style="color: var(--amber);">← Back to Writing</a>
+                <p style="color: var(--ink);">${error.message}</p>
+                <p style="color: var(--ink); margin-top: 1rem;">
+                    <a href="./projects.html" style="color: var(--red);">← Back to Projects</a>
                 </p>
             `;
         });

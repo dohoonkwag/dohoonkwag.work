@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post</title>
+    <title>Projects</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS2E5YSQR8"></script>
     <script>
@@ -25,13 +25,36 @@
             </ul>
         </nav>
 
-        <a href="./projects.html" class="back-link">&nbsp;Projects</a>
-
-        <main id="post-container">
-            <p style="color: var(--ink); font-family: var(--mono); font-size: 0.8rem;">
-                Loading…
+        <header class="page-header">
+            <h1 class="page-title">Projects</h1>
+            <hr class="section-rule">
+            <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1.75rem; max-width: 480px;">
+                Things I've built for fun, curiosity, or just to learn something new.
             </p>
-        </main>
+        </header>
+
+        <!-- newest first -->
+        <div class="feed" id="feed">
+
+            <a href="post.html?post=example-project" class="post-card">
+                <span class="post-date">Month 2026</span>
+                <h2 class="post-title">Example Project — Replace Me</h2>
+                <p class="post-excerpt">
+                    This is a placeholder card. Edit posts/example-project.md with your
+                    real write-up, then update this card's title, date, and excerpt.
+                </p>
+            </a>
+
+            <!-- copy this for each new project:
+
+            <a href="post.html?post=FILENAME" class="post-card">
+                <span class="post-date">Month YYYY</span>
+                <h2 class="post-title">Project Title</h2>
+                <p class="post-excerpt">A one or two sentence teaser.</p>
+            </a>
+
+            -->
+        </div>
 
         <footer>
             <p>&copy; 2025 Dohoon Kwag</p>
@@ -40,9 +63,6 @@
                 <a href="https://linkedin.com/in/dohoonkwag" target="_blank">LinkedIn</a>
             </div>
         </footer>
-
-        <script src="./js/marked.min.js"></script>
-        <script src="./js/blog-renderer.js"></script>
     </div>
 </body>
 </html>
