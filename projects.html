@@ -19,29 +19,48 @@
 
         <header class="page-header">
             <h1 class="page-title">Projects</h1>
+            <hr class="section-rule">
+            <p style="color: var(--ink-muted); font-size: 0.95rem; max-width: 480px;">
+                Passion projects I've built, tinkered with, or am still taking apart.
+            </p>
         </header>
 
-        <div class="feed" id="feed">
-            <a href="post.html?post=example-project" class="post-card">
-                <div class="track-info">
-                    <h2 class="post-title">Example Project — Replace Me</h2>
-                    <p class="post-excerpt">A brief, elegant description of the project.</p>
+        <div class="project-grid" id="projectGrid">
+
+            <a href="./project.html?p=eog-phrase-selector" class="project-card">
+                <div class="project-card-body">
+                    <h2 class="project-title">EOG Phrase Selector</h2>
+                    <p class="project-excerpt">Communicating using only eye blinks!</p>
+                    <div class="project-tags">
+                        <span class="tag-pill">NeuroSky MindWave Mobile 2</span>
+                        <span class="tag-pill">Arduino</span>
+                        <span class="tag-pill">HC-05</span>
+                        <span class="tag-pill">Python</span>
+                    </div>
                 </div>
-                <span class="post-date">2026</span>
             </a>
 
-            <!-- copy this for each new project:
-            <a href="post.html?post=FILENAME" class="post-card">
-                <div class="track-info">
-                    <h2 class="post-title">Project Title Goes Here</h2>
-                    <p class="post-excerpt">A one or two sentence teaser.</p>
+            <!-- ══════════════════════════════════════════
+                 PROJECT CARD TEMPLATE — copy for each new project
+                 Remove the .project-card-image block entirely if there's no photo.
+            ═══════════════════════════════════════════ -->
+            <!--
+            <a href="./project.html?p=PROJECT-SLUG" class="project-card">
+                <div class="project-card-image">
+                    <img src="./images/PROJECT-IMAGE.jpg" alt="Project name">
                 </div>
-                <span class="post-date">YYYY</span>
+                <div class="project-card-body">
+                    <h2 class="project-title">Project Title</h2>
+                    <p class="project-excerpt">A one or two sentence description of the project.</p>
+                    <div class="project-tags">
+                        <span class="tag-pill">Arduino</span>
+                        <span class="tag-pill">CAD</span>
+                    </div>
+                </div>
             </a>
             -->
-        </div>
 
-        <div class="fin" aria-hidden="true">&#10087;</div>
+        </div>
 
         <footer>
             <p>&copy; 2026 Dohoon Kwag</p>
