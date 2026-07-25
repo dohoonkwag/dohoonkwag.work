@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS2E5YSQR8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-FS2E5YSQR8');
-    </script>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -21,43 +13,37 @@
             <ul class="nav-links">
                 <li><a href="./index.html"    class="nav-button">Home</a></li>
                 <li><a href="./work.html"     class="nav-button">Work</a></li>
-                <li><a href="./projects.html" class="nav-button">Projects</a></li>
+                <li><a href="./projects.html" class="nav-button is-active">Projects</a></li>
             </ul>
         </nav>
 
         <header class="page-header">
             <h1 class="page-title">Projects</h1>
-            <hr class="section-rule">
-            <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1.75rem; max-width: 480px;">
-                Things I've built for fun, curiosity, or just to learn something new.
-            </p>
+            <p class="page-lede">Selected builds, scripts, and concepts</p>
         </header>
 
-        <!-- newest first -->
         <div class="feed" id="feed">
-
             <a href="post.html?post=example-project" class="post-card">
-                <span class="post-date">Month 2026</span>
-                <h2 class="post-title">Example Project — Replace Me</h2>
-                <p class="post-excerpt">
-                    This is a placeholder card. Edit posts/example-project.md with your
-                    real write-up, then update this card's title, date, and excerpt.
-                </p>
+                <div class="track-info">
+                    <h2 class="post-title">Example Project — Replace Me</h2>
+                    <p class="post-excerpt">A brief, elegant description of the project.</p>
+                </div>
+                <span class="post-date">2026</span>
             </a>
 
             <!-- copy this for each new project:
-
             <a href="post.html?post=FILENAME" class="post-card">
-                <span class="post-date">Month YYYY</span>
-                <h2 class="post-title">Project Title</h2>
-                <p class="post-excerpt">A one or two sentence teaser.</p>
+                <div class="track-info">
+                    <h2 class="post-title">Project Title Goes Here</h2>
+                    <p class="post-excerpt">A one or two sentence teaser.</p>
+                </div>
+                <span class="post-date">YYYY</span>
             </a>
-
             -->
         </div>
 
         <footer>
-            <p>&copy; 2025 Dohoon Kwag</p>
+            <p>&copy; 2026 Dohoon Kwag</p>
             <div class="footer-links">
                 <a href="mailto:dlkwag05@gmail.com">Email</a>
                 <a href="https://linkedin.com/in/dohoonkwag" target="_blank">LinkedIn</a>
